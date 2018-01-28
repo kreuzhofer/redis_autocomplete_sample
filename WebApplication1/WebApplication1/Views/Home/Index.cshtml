@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script>
+  $( function() {
+    function log( message ) {
+      $( "<div>" ).text( message ).prependTo( "#log" );
+      $( "#log" ).scrollTop( 0 );
+    }
+
+    $( "#search" ).autocomplete({
+      source: "/api/autocomplete",
+      minLength: 1,
+      delay: 100,
+      select: function( event, ui ) {
+        log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+      }
+    });
+  } );
+</script>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Learn how to build ASP.NET apps with Visual Studio that can run on GCP.
+                    <a class="btn btn-default" href="https://cloud.google.com/visual-studio/">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h2>Product Search</h2>
+        <input type="text" id="search" />
+    </div>
+</div>
+
+<div class="ui-widget" style="margin-top:2em; font-family:Arial">
+    Result:
+    <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
+</div>

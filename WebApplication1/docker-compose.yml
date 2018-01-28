@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  webapplication1:
+    image: webapplication1
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+
+  importerjobconsoleapp:
+    image: importerjobconsoleapp
+    build:
+      context: .
+      dockerfile: ../ImporterJobConsoleApp/Dockerfile
+
