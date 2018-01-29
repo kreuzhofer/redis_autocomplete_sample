@@ -11,8 +11,8 @@
 
     $( "#search" ).autocomplete({
       source: "/api/autocomplete",
-      minLength: 1,
-      delay: 100,
+      minLength: 2,
+      delay: 200,
       select: function( event, ui ) {
         log( "Selected: " + ui.item.value + " aka " + ui.item.id );
       }
