@@ -11,5 +11,5 @@ services:
     image: importerjobconsoleapp
     build:
       context: .
-      dockerfile: ../ImporterJobConsoleApp/Dockerfile
+      dockerfile: ImporterJobConsoleApp/Dockerfile
 

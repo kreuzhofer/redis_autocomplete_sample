@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  importerjobconsoleapp:
-    image: importerjobconsoleapp
-    build:
-      context: .
-      dockerfile: Dockerfile

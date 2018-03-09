@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebApplication1\AutoComplete\AutoComplete.csproj" />
+    <ProjectReference Include="..\AutoComplete\AutoComplete.csproj" />
   </ItemGroup>
 
 </Project>

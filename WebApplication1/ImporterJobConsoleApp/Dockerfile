@@ -4,11 +4,11 @@ WORKDIR /app
 FROM microsoft/dotnet:2.0-sdk AS build
 WORKDIR /src
 COPY *.sln ./
-COPY ../ImporterJobConsoleApp/ImporterJobConsoleApp.csproj ../ImporterJobConsoleApp/
+COPY ImporterJobConsoleApp/ImporterJobConsoleApp.csproj ImporterJobConsoleApp/
 COPY AutoComplete/AutoComplete.csproj AutoComplete/
 RUN dotnet restore
 COPY . .
-WORKDIR /src/../ImporterJobConsoleApp
+WORKDIR /src/ImporterJobConsoleApp
 RUN dotnet build -c Release -o /app
 
 FROM build AS publish
